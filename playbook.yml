@@ -7,6 +7,10 @@
     seeds: 192.168.10.11
     spark_version: spark-1.2.0-bin-hadoop2.4
     connector_jar: spark-connector-1.2.0-alpha1-driver-2.1.4-1.0.0-SNAPSHOT-fat.jar
+    scala_version: 2.10.4
+    sbt_version: 0.13.5
+    zookeeper_version: 3.4.6
+    kafka_version: 0.8.1.1
 
   tasks:
   - name: install htop
@@ -16,6 +20,7 @@
     - cassandra
     - opscenter
     - spark
+    - kafka
 #    - { role: mysql, tags: [ 'mysql' ] }
 
   tasks:

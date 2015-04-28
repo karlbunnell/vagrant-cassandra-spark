@@ -1,0 +1,6 @@
+---
+- include: install-scala.yml
+- include: install-sbt.yml
+- include: install-zookeeper.yml  
+- include: install-kafka.yml
+
