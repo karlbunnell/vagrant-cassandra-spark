@@ -7,9 +7,9 @@
     seeds: 192.168.10.11
     spark_version: spark-1.2.0-bin-hadoop2.4
     connector_jar: spark-cassandra-connector-assembly-1.3.0-SNAPSHOT.jar
-    scala_version: 2.10
-    zookeeper_version: 3.4.6
-    kafka_version: 0.8.2.1
+    scala_version: "2.10"
+    zookeeper_version: "3.4.6"
+    kafka_version: "0.8.2.1"
 
   tasks:
   - name: install htop

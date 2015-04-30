@@ -1,5 +1,4 @@
 .vagrant
 .idea
-spark_example.jar
-*.chris
 *.swp
+dev/
