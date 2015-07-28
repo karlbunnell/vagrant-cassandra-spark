@@ -8,13 +8,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.host_name = "cassandra-spark"
   config.vm.network :private_network, ip: "192.168.10.11"
   config.vm.network :forwarded_port, guest: 22, host: 1233
+  config.vm.network :forwarded_port, guest: 9092, host: 9092
 
   config.vm.provision :ansible do |ansible|
     ansible.playbook = "playbook.yml"
   end
 
   config.vm.provider :virtualbox do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "4048"]
-    vb.cpus = 2
+    vb.customize ["modifyvm", :id, "--memory", "8092"]
+    vb.cpus = 4
   end
 end

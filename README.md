@@ -6,6 +6,7 @@ A work in progress.
 Installs:
 * Cassandra
 * Spark
+* Kafka
 
 Prereqs:
 * Vagrant
