@@ -16,4 +16,7 @@
  
 - name: Run the kafka service
   service: name=kafka state=started enabled=yes
-  
+
+- name: get kafka binaries on the path
+  lineinfile: dest=/home/vagrant/.bashrc line="export PATH=$PATH:/usr/local/kafka/bin"
+
