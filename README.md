@@ -88,7 +88,7 @@ test message two
 test message three
 ```
 Once loaded you can begin typing messages on the console. Nothing interesting seems to happen. We need to run a consumer that 
-pulls messages from the topic. You can exit the producer by pressing the <ctrl><c> key combination. 
+pulls messages from the topic. You can exit the producer by pressing the ctrl-c key combination. 
 Run the following command:
 
 ```
