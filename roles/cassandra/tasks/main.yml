@@ -16,6 +16,9 @@
 - name: override cassandra.yaml file
   template: src=cassandra.yaml dest=/etc/cassandra/
 
+- name: copy cassandra-lucene-index plugin to proper location
+  copy: src=./cassandra-lucene-index-plugin-{{ lucene_plugin_version }}.jar dest=/usr/share/cassandra/lib/cassandra-lucene-index-plugin-{{ lucene_plugin_version }}.jar owner=vagrant group=vagrant mode=0644 force=no
+
 - name: make sure cassandra is started
   service: name=cassandra state=restarted
 

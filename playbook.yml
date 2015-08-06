@@ -10,6 +10,7 @@
     scala_version: "2.10"
     zookeeper_version: "3.4.6"
     kafka_version: "0.8.2.1"
+    lucene_plugin_version: "2.1.8.1"
 
   tasks:
   - name: install htop

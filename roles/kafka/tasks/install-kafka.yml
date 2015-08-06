@@ -1,19 +1,19 @@
 
 - name: Extract Kafka {{ kafka_version }}
-  copy: src=./kafka_{{ scala_version }}-{{ kafka_version }}.tgz dest=/tmp/kafka_{{ scala_version }}-{{ kafka_version }}.tar.gz owner=vagrant group=vagrant mode=0644 force=no 
-  
+  copy: src=./kafka_{{ scala_version }}-{{ kafka_version }}.tgz dest=/tmp/kafka_{{ scala_version }}-{{ kafka_version }}.tar.gz owner=vagrant group=vagrant mode=0644 force=no
+
 - name: Unpack the tar
   shell: tar -xzvf /tmp/kafka_{{ scala_version }}-{{ kafka_version }}.tar.gz chdir=/tmp/ creates=/tmp/kafka_{{ scala_version }}-{{ kafka_version }}
-  
+
 - name: Copy Kafka into place
   shell: mv /tmp/kafka_{{ scala_version }}-{{ kafka_version }} /usr/local/kafka-{{ kafka_version }} creates=/usr/local/kafka-{{ kafka_version }}
-  
+
 - name: Symlink /usr/local/kafka to this version
   shell: ln -s kafka-{{ kafka_version }} kafka chdir=/usr/local creates=/usr/local/kafka
-  
+
 - name: Install the Kafka service handler
   template: src=kafka dest=/etc/init.d/ mode=0755
- 
+
 - name: Run the kafka service
   service: name=kafka state=started enabled=yes
 
