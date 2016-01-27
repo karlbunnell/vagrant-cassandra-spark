@@ -5,7 +5,8 @@
     cluster_name:  EAR_Cluster
     vagrant_ip: 192.168.10.11
     seeds: 192.168.10.11
-    spark_version: spark-1.4.0-bin-hadoop2.4
+#    spark_version: spark-1.4.0-bin-hadoop2.4
+    spark_version: spark-1.5.0-bin-hadoop2.4
     connector_jar: spark-cassandra-connector-assembly-1.4.0-M1-SNAPSHOT.jar 
     scala_version: "2.10"
     zookeeper_version: "3.4.6"
